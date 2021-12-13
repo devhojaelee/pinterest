@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html lang="ko" xmlns:margin="http://www.w3.org/1999/xhtml">
+
+{% include 'head.html' %}
+
 <body>
-hello world
+
+{% include 'header.html' %}
+
+{% block content %}
+{% endblock %}
+
+
+{% include 'footer.html' %}
+
 </body>
 </html>
