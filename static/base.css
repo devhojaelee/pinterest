@@ -1,8 +1,9 @@
 .pragmatic_logo {
- font-family: 'Hahmlet', serif;
+ font-family: 'Permanent Marker', cursive;
 }
 
 .pragmatic_header {
+ font-family: 'Hahmlet';
  text-align:center;
  margin: 2rem 0;
 }
@@ -13,6 +14,7 @@
 }
 
 .pragmatic_footer {
+ font-family: 'Permanent Marker', cursive;
  text-align:center;
  margin-top:2rem;
 }

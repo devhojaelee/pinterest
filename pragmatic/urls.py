@@ -20,6 +20,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('accountapp.urls')),
+    path('accounts/', include('accountapp.urls')), #accounts/ 링크로 들어오면, accountapp 밑에 urls.py 가서 찾아보겠다.
     path('profiles/', include('profileapp.urls')),
+    path('articles/', include('articleapp.urls')),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
