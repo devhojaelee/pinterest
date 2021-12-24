@@ -277,7 +277,7 @@ MagicGrid.prototype.listen = function listen () {
 let magicGrid = new MagicGrid({
   container: '.container',
   animate: true,
-  gutter: 30,
+  gutter: 12, //핀터레스트처럼 썸네일 간격 줄이기
   static: true,
   useMin: true
 });
