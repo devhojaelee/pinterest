@@ -23,3 +23,21 @@
     html {
     font-size: 13px;}
 }
+
+
+a {
+    color:#c71d44;
+    text-decoration : none;
+}
+
+a:hover {
+    color: green;
+    text-decoration : none;
+}
+
+.pragmatic_header_navbar {
+    margin: 1rem 2rem;
+    font-family:'Hahmlet';
+}
+
+
