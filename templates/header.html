@@ -3,26 +3,26 @@
         <h1 class="pragmatic_logo">CLOOCUS</h1>
     </div>
     <div class="pragmatic_header_nav_bar">
-        <a href="{% url 'articleapp:list' %}" >
-        <span>Articles</span>
+        <a href="{% url 'articleapp:list' %}" class="pragmatic_header_nav" >
+        Articles
         </a>
-        <a href="{% url 'projectapp:list' %}">
-        <span>Projects</span>
+        <a href="{% url 'projectapp:list' %}" class="pragmatic_header_nav">
+        Projects
         </a>
 
         {% if not user.is_authenticated %}
         <a href="{% url 'accountapp:login' %}?next={{ request.path }}" >
-        <span>login</span>
+        login
         </a>
-        <a href="{% url 'accountapp:create' %}">
-        <span>Sign Up</span>
+        <a href="{% url 'accountapp:create' %}" class="pragmatic_header_nav">
+        Sign Up
         </a>
         {% else %}
-        <a href="{% url 'accountapp:detail' pk=user.pk %}">
-            <span>MyPage</span>
+        <a href="{% url 'accountapp:detail' pk=user.pk %}" class="pragmatic_header_nav">
+            MyPage
         </a>
-        <a href="{% url 'accountapp:logout' %}?next={{ request.path }}">
-            <span>logout</span>
+        <a href="{% url 'accountapp:logout' %}?next={{ request.path }}" class="pragmatic_header_nav">
+            logout
         </a>
         {% endif %}
     </div>

@@ -35,9 +35,12 @@ a:hover {
     text-decoration : none;
 }
 
-.pragmatic_header_navbar {
-    margin: 1rem 2rem;
+.pragmatic_header_nav_bar {
+    margin: 1rem 4rem;
     font-family:'Hahmlet';
 }
 
-
+.pragmatic_header_nav {
+    margin: 0 0.5rem;
+    font-family:'Hahmlet';
+}
