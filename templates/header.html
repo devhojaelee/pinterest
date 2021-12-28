@@ -14,7 +14,11 @@
         </a>
 
         {% if not user.is_authenticated %}
+        <a href="{% url 'accountapp:login' %}" class="pragmatic_header_nav" >
+        <!--
         <a href="{% url 'accountapp:login' %}?next={{ request.path }}" >
+        이걸로 하니까 자꾸 login->sign up-> login -> 하니까 도로 sign up 페이지 뜨더라구.
+        -->
         login
         </a>
         <a href="{% url 'accountapp:create' %}" class="pragmatic_header_nav">
