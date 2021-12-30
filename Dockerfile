@@ -1,5 +1,8 @@
 FROM python:3.9.0
 WORKDIR /home/
+
+RUN echo "testing" #도커에서 캐시된 이미지를 갖고 있어서 앞단에 이런 의미없는걸 넣어줘야 처음부터 빌드를 한다.
+
 RUN git clone https://www.github.com/devhojaelee/pinterest.git
 
 WORKDIR /home/pinterest/
@@ -9,10 +12,10 @@ RUN echo "SECRET_KEY=django-insecure-0=$@*4&8a!^e=dye+yade^!&!evq1^x#r+x5t&%-w*)
 
 RUN pip install gunicorn
 
-RUN python manage.py migrate
+RUN pip install mysqlclient
 
 RUN python manage.py collectstatic
 
 EXPOSE 8888
 
-CMD ["gunicorn", "pragmatic.wsgi", "--bind", "0.0.0.0:8000"]
+CMD ["bash", "-c", "python manage.py migrate --settings=pragmatic.settings.deploy && gunicorn pragmatic.wsgi --env DJANGO_SETTINGS_MODULE=pragmatic.settings myproject.wsgi --bind 0.0.0.0:8000"]
